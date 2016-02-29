@@ -6,6 +6,8 @@ var properties = require("properties");
  * on npm: https://www.npmjs.com/package/properties
  */
 module.exports = function (content) {
+  this.cacheable();
+  
   var callback = this.async();
   properties.parse(content, function (err, result) {
     if (err) {
